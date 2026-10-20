@@ -1,0 +1,53 @@
+{
+  "manifest_version": "0.3",
+  "name": "mcp-person-social-footprint-mapper",
+  "version": "1.0.0",
+  "description": "MCP server for Person Social Footprint Mapper. Find a person's public GitHub, Bluesky, personal site, Substack, and X profiles from their name and company domain, with a match confidence per platform. No emails or phones. Runs on Apify. Clay-ready output.",
+  "author": {
+    "name": "Mamba Labs"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/mambalabsdev/mcp-person-social-footprint-mapper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-person-social-footprint-mapper"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "build/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/build/index.js"
+      ],
+      "env": {
+        "APIFY_TOKEN": "${user_config.apify_token}",
+        "GITHUB_TOKEN": "${user_config.github_token}",
+        "X_BEARER_TOKEN": "${user_config.x_bearer_token}"
+      }
+    }
+  },
+  "user_config": {
+    "apify_token": {
+      "type": "string",
+      "title": "Apify API Token",
+      "description": "Apify API token for running the actor",
+      "sensitive": true,
+      "required": false
+    },
+    "github_token": {
+      "type": "string",
+      "title": "GitHub token (optional)",
+      "description": "Your own free GitHub token, for larger batches",
+      "sensitive": true,
+      "required": false
+    },
+    "x_bearer_token": {
+      "type": "string",
+      "title": "X API bearer token (optional)",
+      "description": "Your own X API bearer token; without it X is skipped",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

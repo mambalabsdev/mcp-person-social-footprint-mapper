@@ -1,0 +1,30 @@
+{
+  "name": "mcp-person-social-footprint-mapper",
+  "displayName": "Person Social Footprint Mapper",
+  "version": "1.0.0",
+  "description": "MCP server for Person Social Footprint Mapper. Find a person's public GitHub, Bluesky, personal site, Substack, and X profiles from their name and company domain, with a match confidence per platform. No emails or phones. Runs on Apify. Clay-ready output.",
+  "author": {
+    "name": "Mamba Labs",
+    "email": "labs@mambamindsetgrowth.com"
+  },
+  "homepage": "https://mambabuilt.com",
+  "repository": "https://github.com/mambalabsdev/mcp-person-social-footprint-mapper",
+  "license": "MIT",
+  "category": "productivity",
+  "tags": [
+    "social-profiles",
+    "github",
+    "bluesky",
+    "apify",
+    "clay"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "social-profiles",
+    "github",
+    "apify",
+    "clay"
+  ],
+  "mcpServers": ".mcp.json"
+}

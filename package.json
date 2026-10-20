@@ -1,0 +1,51 @@
+{
+  "name": "@mambalabsdev/mcp-person-social-footprint-mapper",
+  "version": "1.0.0",
+  "description": "MCP server for Person Social Footprint Mapper. Find a person's public GitHub, Bluesky, personal site, Substack, and X profiles from their name and company domain, with a match confidence per platform. No emails or phones. Runs on Apify. Clay-ready output.",
+  "type": "module",
+  "bin": {
+    "mcp-person-social-footprint-mapper": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "test": "npm run build && node --test test/*.test.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "social-profiles",
+    "github",
+    "bluesky",
+    "person-enrichment",
+    "sales-research",
+    "apify",
+    "clay",
+    "lead-generation"
+  ],
+  "author": "Mamba Labs <labs@mambamindsetgrowth.com>",
+  "license": "MIT",
+  "homepage": "https://apify.com/mambalabs/person-social-footprint-mapper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mambalabsdev/mcp-person-social-footprint-mapper"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "typescript": "5.9.3"
+  },
+  "mcpName": "com.mambabuilt/mcp-person-social-footprint-mapper"
+}

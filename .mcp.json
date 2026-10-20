@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mamba-person-social-footprint-mapper": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mambalabsdev/mcp-person-social-footprint-mapper"
+      ],
+      "env": {
+        "APIFY_TOKEN": "your-apify-token"
+      }
+    }
+  }
+}
